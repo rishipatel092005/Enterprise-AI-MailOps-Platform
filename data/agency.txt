@@ -1,0 +1,196 @@
+# Enterprise AI MailOps Platform - Knowledge Base
+
+## Company Information
+Name: Enterprise AI Solutions
+Industry: Artificial Intelligence & Automation Services
+Founded: 2024
+
+## Products & Services
+
+### 1. Email Automation Platform
+- Intelligent email categorization
+- AI-powered response generation
+- Quality assurance automation
+- Gmail integration with OAuth 2.0
+- Real-time email monitoring
+- Multi-agent workflow orchestration
+
+### 2. RAG System (Retrieval-Augmented Generation)
+- Vector database with Chroma
+- HuggingFace embeddings
+- Knowledge base integration
+- Context-aware responses
+
+### 3. LangGraph Workflow Engine
+- Multi-agent orchestration
+- State management
+- Conditional routing
+- Enterprise-grade scalability
+
+## Pricing
+
+### Starter Plan - $99/month
+- Up to 1,000 emails/month
+- Basic email categorization
+- Standard response generation
+- Email support
+
+### Professional Plan - $299/month
+- Up to 10,000 emails/month
+- Advanced categorization
+- RAG-powered responses
+- Priority email support
+- Custom knowledge base
+
+### Enterprise Plan - Custom Pricing
+- Unlimited emails
+- Full customization
+- Dedicated support
+- On-premise deployment option
+
+## Features
+
+### Email Categorization
+- Complaint Detection
+- Inquiry Identification
+- Feedback Recognition
+- Unrelated Email Filtering
+
+### AI Capabilities
+- Groq LLM (llama-3.3-70b)
+- Fast inference
+- High accuracy
+- Cost-effective
+
+### Security
+- OAuth 2.0 for Gmail
+- End-to-end encryption
+- Secure API keys
+- GDPR compliant
+
+## FAQ
+
+### Q: How does the AI categorize emails?
+A: The system uses advanced LLMs to analyze email content and categorize them into complaints, inquiries, feedback, or unrelated messages with 95%+ accuracy.
+
+### Q: Can I customize the responses?
+A: Yes! You can update the knowledge base (agency.txt) with your specific business information, and the AI will use it to generate contextual responses.
+
+### Q: How often does the system check emails?
+A: By default, the system checks emails every 60 seconds. You can configure this interval in the settings.
+
+### Q: Is my data secure?
+A: Yes, we use OAuth 2.0 for Gmail authentication and store data securely. No email content is shared with third parties.
+
+### Q: What's the accuracy rate?
+A: The system maintains a 92-97% accuracy rate depending on email complexity and knowledge base comprehensiveness.
+
+## Support
+
+### Email Support
+contact@enterpriseai.com
+
+### Phone Support
++1-800-AI-SOLUTIONS (1-800-247-685)
+
+### Documentation
+https://docs.enterpriseai.com
+
+### API Reference
+https://api.enterpriseai.com/docs
+
+## Integration
+
+### Supported Platforms
+- Gmail (via Google API)
+- Microsoft Outlook (coming soon)
+- Custom SMTP (coming soon)
+
+### Developer Tools
+- REST API
+- Python SDK
+- FastAPI integration
+- Webhook support
+
+## Policies
+
+### Service Level Agreement (SLA)
+- 99.9% uptime guarantee
+- 24/7 monitoring
+- Automatic failover
+
+### Data Retention
+- Emails retained for 90 days
+- Automatic cleanup
+- GDPR compliant deletion
+
+### Response Time
+- Average response generation: 2-5 seconds
+- Batch processing: 1-2 minutes per 100 emails
+
+## Training & Resources
+
+### Getting Started Guide
+Complete setup takes 15-20 minutes with our comprehensive guide.
+
+### Video Tutorials
+Available on our YouTube channel
+
+### Community Forum
+Join our Slack community for tips and tricks
+
+## Contact Information
+
+### Headquarters
+123 AI Street
+San Francisco, CA 94102
+USA
+
+### Business Hours
+Monday - Friday: 9 AM - 6 PM PST
+Saturday - Sunday: Closed
+
+### Holiday Support
+Limited support on major holidays
+Emergency support available 24/7 for enterprise customers
+
+## Technology Stack
+
+### Backend
+- Python 3.10+
+- FastAPI
+- LangGraph
+- LangChain
+- Groq API
+
+### Database
+- Chroma Vector Database
+- SQLite
+- HuggingFace Embeddings
+
+### AI/ML
+- Large Language Models (Groq)
+- RAG System
+- Multi-Agent Orchestration
+
+### Integration
+- Google Gmail API
+- OAuth 2.0
+- REST API
+
+## Upcoming Features
+
+### Q3 2024
+- Sentiment Analysis
+- Multi-language support
+- Advanced scheduling
+
+### Q4 2024
+- Outlook integration
+- Custom model support
+- Analytics dashboard
+
+### Q1 2025
+- Mobile app
+- Browser extension
+- Voice automation

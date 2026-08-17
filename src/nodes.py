@@ -136,16 +136,35 @@ class Nodes:
             return "rewrite"
 
     def create_draft_response(self, state: GraphState) -> GraphState:
-        """Creates a draft response in Gmail."""
-        print(Fore.YELLOW + "Creating draft email...\n" + Style.RESET_ALL)
-        self.gmail_tools.create_draft_reply(state["current_email"], state["generated_email"])
+        """Creates a draft response in Gmail for your review."""
+        print(Fore.YELLOW + "📝 Creating draft in Gmail...\n" + Style.RESET_ALL)
+        try:
+            result = self.gmail_tools.create_draft_reply(state["current_email"], state["generated_email"])
+            if result:
+                print(Fore.GREEN + f"✅ DRAFT CREATED SUCCESSFULLY!" + Style.RESET_ALL)
+                print(Fore.CYAN + f"   From: {state['current_email'].sender}" + Style.RESET_ALL)
+                print(Fore.CYAN + f"   Subject: Re: {state['current_email'].subject}" + Style.RESET_ALL)
+                print(Fore.YELLOW + f"   📌 Check your Gmail DRAFTS folder to review & send!\n" + Style.RESET_ALL)
+            else:
+                print(Fore.RED + "❌ Failed to create draft" + Style.RESET_ALL)
+        except Exception as e:
+            print(Fore.RED + f"❌ Error creating draft: {str(e)}" + Style.RESET_ALL)
         
         return {"retrieved_documents": "", "trials": 0}
 
     def send_email_response(self, state: GraphState) -> GraphState:
         """Sends the email response directly using Gmail."""
-        print(Fore.YELLOW + "Sending email...\n" + Style.RESET_ALL)
-        self.gmail_tools.send_reply(state["current_email"], state["generated_email"])
+        print(Fore.GREEN + "🚀 SENDING EMAIL DIRECTLY...\n" + Style.RESET_ALL)
+        try:
+            result = self.gmail_tools.send_reply(state["current_email"], state["generated_email"])
+            if result:
+                print(Fore.GREEN + f"✅ EMAIL SENT SUCCESSFULLY!" + Style.RESET_ALL)
+                print(Fore.CYAN + f"   To: {state['current_email'].sender}" + Style.RESET_ALL)
+                print(Fore.CYAN + f"   Subject: Re: {state['current_email'].subject}\n" + Style.RESET_ALL)
+            else:
+                print(Fore.RED + "❌ Failed to send email" + Style.RESET_ALL)
+        except Exception as e:
+            print(Fore.RED + f"❌ Error sending email: {str(e)}" + Style.RESET_ALL)
         
         return {"retrieved_documents": "", "trials": 0}
     

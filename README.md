@@ -31,7 +31,7 @@ The **Enterprise AI MailOps Platform** is an enterprise-grade email automation s
                ▼
 ┌─────────────────────────────────────────────────────┐
 │         Email Loader & Categorizer Agent             │
-│  (LangGraph + AI - Classify: Complaint/Inquiry/...)  │
+│  (LangGraph + AI - Classify: Complaint/Inquiry/ FB.)  │
 └──────────────┬──────────────────────────────────────┘
                │
         ┌──────┴──────┐
@@ -80,44 +80,66 @@ The **Enterprise AI MailOps Platform** is an enterprise-grade email automation s
 - Gmail API Credentials ([Setup guide](https://developers.google.com/gmail/api/quickstart/python))
 - Virtual environment (venv)
 
-### Installation
+### Run the Project on Windows (PowerShell)
 
-**1. Clone & Setup**
-```bash
-git clone https://github.com/YOUR_USERNAME/enterprise-ai-mailops-platform.git
-cd enterprise-ai-mailops-platform
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+**1. Open PowerShell in the project folder**
+```powershell
+cd "c:\Users\Admin\Downloads\Enterprise AI MailOps Platform\Enterprise AI MailOps Platform"
 ```
 
-**2. Install Dependencies**
-```bash
+**2. Create a virtual environment**
+```powershell
+python -m venv venv
+```
+
+**3. Activate the virtual environment**
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks activation, run this first:
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv\Scripts\Activate.ps1
+```
+
+**4. Install dependencies**
+```powershell
 pip install -r requirements.txt
 ```
 
-**3. Configure Environment**
-```bash
-# Create .env file
-cp .env.example .env
-
-# Edit .env with your credentials:
-# GROQ_API_KEY=your_groq_key_here
-# MY_EMAIL=your-email@gmail.com
+**5. Create the environment file**
+Create a file named `.env` in the project root and add:
+```env
+GROQ_API_KEY=your_groq_api_key_here
+MY_EMAIL=your_email@gmail.com
 ```
 
-**4. Setup Gmail OAuth**
-- Download credentials.json from Google Cloud Console
-- Place it in the project root directory
+**6. Add Gmail credentials**
+- Download `credentials.json` from Google Cloud Console
+- Place it in the project root folder
+- The app will create `token.json` automatically after first run
 
-**5. Initialize Vector Database**
-```bash
-# Update agency.txt with your business info first!
+**7. Build the vector database**
+```powershell
 python create_index.py
 ```
 
-**6. Run the Agent**
-```bash
+**8. Run the project**
+```powershell
 python main.py
+```
+
+**9. Test the workflow**
+- Send a test email from a different Gmail account
+- The app will check inbox every 60 seconds
+- If the email is eligible, it will create a draft reply in your Gmail Drafts folder
+
+### Example test email
+```text
+Subject: Question about pricing and features
+
+Hi, I am interested in your AI agent platform. Can you please share your pricing plans, key features, and support response time?
 ```
 
 ---
@@ -285,4 +307,4 @@ For issues, questions, or suggestions:
 
 ---
 
-**Transform your email workflow with AI! 🚀**
+
