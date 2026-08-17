@@ -267,25 +267,16 @@ MY_EMAIL=your-email@gmail.com           # Gmail account to monitor
 
 ---
 
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request with description
-
----
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
 
 ## 👨‍💻 Author
 
 **Rishi Patel**  
-AI & Automation Engineer
+## 👨‍💻 Author
+
+**Rishi Patel**
+
+- GitHub: https://github.com/rishipatel092005
+- Project Repository: https://github.com/rishipatel092005/Enterprise-AI-MailOps-Platform
 
 ---
 
